@@ -2,7 +2,7 @@
 
 > Прототип показывает, как описать купонное событие, проверить право держателя на выплату и зафиксировать выплату тестовых токенов в Solana.
 
-[Репозиторий](https://github.com/diaserzanov5-ship-it/BondFlow) · [Хакатон Superteam Kazakhstan × KASE](https://superteam.fun/earn/listing/superteam-kazakhstan-x-kase-side-track-corporate-actions-on-blockchain)
+[Открыть демо](https://bondflow-vercel-upload.vercel.app/) · [Рабочая область Vercel](https://vercel.com/diaserzanov5-6697) · [Репозиторий](https://github.com/diaserzanov5-ship-it/BondFlow) · [Хакатон Superteam Kazakhstan × KASE](https://superteam.fun/earn/listing/superteam-kazakhstan-x-kase-side-track-corporate-actions-on-blockchain)
 
 ---
 
@@ -118,11 +118,13 @@ npm run build
 
 ## Деплой на Vercel
 
-В корне репозитория настроен `vercel.json`: зависимости устанавливаются из `apps/web`, фронтенд собирается командой Vite, а готовые файлы берутся из `apps/web/dist`.
+**Живое демо:** [bondflow-vercel-upload.vercel.app](https://bondflow-vercel-upload.vercel.app/).
 
-1. Импортируйте GitHub-репозиторий `diaserzanov5-ship-it/BondFlow` в Vercel.
-2. Оставьте **Root Directory** корнем репозитория (`.`), чтобы Vercel применил корневой `vercel.json`.
-3. Создайте проект и запустите первый деплой. Последующие push в `main` будут запускать новый деплой.
+Текущая публикация создана вручную через Vercel Drop. GitHub пока не подключён к этому деплою, поэтому новые коммиты сами не публикуются — для обновления нужно повторно загрузить актуальную версию.
+
+В корне репозитория настроен `vercel.json`: зависимости устанавливаются из `apps/web`, фронтенд собирается командой Vite, а готовые файлы берутся из `apps/web/dist`. Эта конфигурация подходит для Git-деплоя, если позже подключить репозиторий к Vercel.
+
+Для Git-деплоя оставьте **Root Directory** корнем репозитория (`.`), чтобы Vercel применил корневой `vercel.json`. После подключения GitHub push в `main` смогут запускать новые деплои.
 
 Для текущего демо переменные окружения не требуются: интерфейс работает на демонстрационных данных и пока не подключён к Solana-программе. Переменные из `apps/web/.env.example` сейчас не читаются интерфейсом. Если `VITE_` переменные будут подключены к клиентскому коду, их значения попадут в браузерную сборку — не храните в них секреты.
 
