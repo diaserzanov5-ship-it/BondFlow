@@ -1,0 +1,4 @@
+.hash-line{display:flex;align-items:center;gap:5px;margin-top:5px;color:#9b91cf;font-size:8px}
+.hash-line code{font:8px ui-monospace,SFMono-Regular,Consolas,monospace;color:#77709e;background:#f7f6fc;border-radius:3px;padding:2px 4px}
+.hash-line>span:last-child{color:#abb0b8}
+.hash-dot{width:5px;height:5px;border-radius:50%;background:#a99ee7}
